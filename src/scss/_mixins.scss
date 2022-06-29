@@ -1,0 +1,20 @@
+@mixin container($width) {
+    max-width: $width;
+    margin: 0 auto;
+}
+
+@mixin flexRowCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex ($fd: 'row', $jc: 'initial', $ai: 'initial', $wr: 'initial') {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $wr;
+}
+
+  

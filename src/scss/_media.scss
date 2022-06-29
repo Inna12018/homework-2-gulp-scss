@@ -1,0 +1,150 @@
+@import './mixins';
+
+@media (min-width: 481px) {
+    .post-gallery {
+
+        &-items-wrap {
+            justify-content: space-between;
+        }
+
+        &-item {
+            @include flex(row, space-between);
+            margin-bottom: 32px;
+        }
+    }
+
+    .text-item {
+        width: calc((100% - 160px) - 21px);
+        &__text {
+            display: block;
+            font-size: 14px;
+            line-height: 26px;
+            color: $text-color;
+        }
+
+        &__title {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        padding: 0 80px;
+    }
+    .site-header {
+        padding: 40px 7%;
+    }
+
+    .header-nav {
+        @include flex(row, center, center);
+        width: 100%;
+        position: static;
+        background-color: #fff;
+
+        &__item {
+            padding: 0;
+            &:hover {
+                background-color: #fff;
+            }
+        }
+        &__link {
+            margin: 0 1.7vw;
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .post-gallery {
+        padding: 56px 0 25px;
+    }
+
+   .inst {
+        padding: 48px 0;
+        &-item {
+            &.item2 {
+                grid-area: 1 / 2;
+                order: 2;
+            }
+
+            &.item3 {
+                grid-area: 1 / 3;
+                order: 3;
+            }
+           
+       }
+   }
+
+   .site-footer {
+       padding: 57px 0;
+
+       &__title {
+           font-size: 16px;
+           line-height: 22px;
+           margin-bottom: 22px;
+       }
+
+       &__text {
+           width: 58.5%;
+           margin: 0 auto 37px;
+       }
+
+       &__contacts {
+           @include flex(row, center);
+       }
+   }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 0;
+    }
+
+    .site-header {
+        padding: 48px 0;
+    }
+
+    .header-nav {
+
+        &__link {
+            margin: 0 2.91vw;
+        }
+        
+    }
+
+    .post-gallery {
+        padding: 66px 0 34px;
+
+        &-items-wrap {
+            justify-content: space-between;
+        }
+
+        &-item {
+            width: calc((100% / 2) - 25px);
+            margin-bottom: 34px;
+        }
+    }
+    .inst {
+        &-item {
+            &.item4 {
+                grid-area: 1 / 4;
+                order: 4;
+        
+            }
+        }
+    }
+
+    .site-footer {
+        padding: 68px 0;
+
+        &__text {
+            margin-bottom: 34px;
+            line-height: 28px;
+            text-align: auto;
+            font-size: 16px;
+        }
+    }
+    
+}

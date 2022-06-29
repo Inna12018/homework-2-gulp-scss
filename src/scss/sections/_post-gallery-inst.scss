@@ -1,0 +1,57 @@
+@import "../variables";
+
+.inst {
+    background-color: $gallery-bg-color;
+    padding: 40px 0;
+
+    &-title-wrap {
+        @include flex();
+    }
+
+    &__title {
+        display: none;
+        font-size: 13px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $title-color;
+        &::after {
+            content: "-";
+            margin-left: 6px;
+        }
+    }
+
+    &-container {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: repeat(auto-fill, 1fr);
+    }
+
+    &-item {
+        &__img {
+            object-fit: cover;
+            max-width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        &.item1 {
+            grid-area: 1 / 1;
+            order: 1;
+        }
+
+        &.item2 {
+            grid-area: 1 / 1;
+            order: -3;
+        }
+
+        &.item3 {
+            grid-area: 1 / 1;
+            order: -2;
+        }
+
+        &.item4 {
+            grid-area: 1 / 1;
+            order: -1;
+        }
+    }
+}

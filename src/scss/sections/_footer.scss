@@ -1,0 +1,59 @@
+.site-footer {
+    background-color: $burger-bg-color;
+    padding: 38px 0 47px;
+    text-align: center;
+
+    &__title {
+        font-size: 14px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $footer-title-color;
+        margin-bottom: 8px;
+        &::before,
+        &::after {
+            content: "-";
+        }
+
+        &::before {
+            margin-right: 6px;
+        }
+
+        &::after {
+            margin-left: 6px;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 20px;
+        width: 100%;
+        color: $footer-text-color;
+        margin-bottom: 26px;
+    }
+
+    &__contacts {
+        display: block;
+        color: $footer-text-color;
+        line-height: 26px;
+        & p:nth-child(1)::after {
+            content: "/";
+            margin: 0 12px;
+        }
+            
+        & p:nth-child(2)::after {
+            content: "/";
+            margin: 0 12px;
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 34px;
+
+    &-icon {
+        margin: 0 3px;
+    }
+}
